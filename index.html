@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/284e3f8804.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Shorten URL</title>
+  </head>
+  <body class="font-[poppins] overflow-hidden">
+    <nav
+      class="flex justify-between p-5 lg:px-0 relative bg-white lg:mx-20 xl:mx-40 2xl:mx-80"
+    >
+      <div class="md:w-2/12  flex items-center">
+        <img class="h-8 cursor-pointer overflow-hidden" src="images/logo.svg" alt="" />
+      </div>
+      <div class="hamburger w-7 space-y-1 md:hidden">
+        <span class="block bg-gray-600 h-1"></span>
+        <span class="block bg-gray-600 h-1"></span>
+        <span class="block bg-gray-600 h-1"></span>
+      </div>
+      <div
+        class="toggle hidden md:block md:static  md:w-10/12 md:ms-4 lg:w-11/12 lg:ms-2 xl:ms-4 absolute mx-5 md:mx-0 left-0 right-0 top-20 transition-all ease-in duration-300"
+      >
+        <div
+          class="text-white font-bold text-lg md:text-gray-400 bg-[#3A3053] md:bg-white rounded-xl p-5 md:p-0 md:flex md:justify-between"
+        >
+          <ul
+            class="md:flex md:items-center text-center space-y-6 md:space-y-0 md:space-x-4 lg:space-x-6"
+          >
+            <li class="">
+              <a href="">Features</a>
+            </li>
+            <li class="">
+              <a href="">Pricing</a>
+            </li>
+            <li
+              class="pb-8 border-b-[1px] border-b-gray-500 md:pb-0 md:border-b-0"
+            >
+              <a href="">Resources</a>
+            </li>
+          </ul>
+          <div
+            class="flex flex-col md:flex-row space-y-6 py-6 md:space-y-0 md:py-0 md:space-x-4"
+          >
+            <button>Login</button>
+            <button
+              class="bg-cyan-400 hover:bg-cyan-500 py-3 rounded-full md:px-3 md:py-1 text-white"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero------------------ -->
+
+    <div class="mt-4 md:mt-6 sm:ms-2 lg:ms-20 xl:ms-40 xl:mt-20 2xl:mx-80">
+      <div class="hero space-y-10 sm:flex sm:flex-row-reverse">
+        <div class="ms-6 2xl:w-1/2">
+            <img class="h-72 w-full object-cover object-left sm:h-full lg:scale-110" src="images/illustration-working.svg" alt="">
+        </div>
+        <div class="text-center text-slate-800 px-3 lg:px-0 2xl:pr-5 space-y-5 sm:text-start 2xl:w-4/6">
+            <h1 class="font-bold text-4xl md:text-5xl xl:text-7xl">More than just shorter links</h1>
+            <p class="text-gray-400  xl:text-xl text-wrap md:w-96 xl:w-10/12">Build your brand's recognition and get detailed insights on how your lins are performing.</p>
+            <button class="bg-teal-400 px-9 py-2 rounded-full font-semibold text-white text-lg">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- url input--------------- -->
+    <div class="mt-40 w-full bg-gray-400 h-screen relative">
+      <div class="mx-5 bg-green-300 p-5 absolute left-0 right-0 -translate-y-[66px] lg:mx-20 xl:ms-40 2xl:mx-80">
+        <div class="flex flex-col  space-y-3">
+          <input class="p-2.5 rounded" type="text" placeholder="Shorten a link here...">
+          <button class="bg-teal-400 text-white py-2.5 rounded">Shorten It!</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const toggle = document.querySelector(".toggle");
+      hamburger.addEventListener("click", () => {
+        toggle.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
