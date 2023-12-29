@@ -166,8 +166,14 @@
       const toggle = document.querySelector(".toggle");
       hamburger.addEventListener("click", () => {
         toggle.classList.toggle("hidden");
-      });
 
+        if(toggle.classList.contains("hidden")) {
+          return;
+        }else{
+          body.classList.toggle("hidden");
+        }
+      });
+      
 
 
       const shortIt = document.querySelector(".shortIt");
@@ -198,7 +204,7 @@
       
       function copyToClipboard(){
         const copyButtons = document.querySelectorAll(".copyBtn");
-        copyButtons.map(button => {
+        copyButtons.forEach(button => {
           button.addEventListener("click",() => {
 
           const parentDiv = this.closest('.linkBox');
